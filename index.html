@@ -104,10 +104,11 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#organize">Organize</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sponsor">Sponsors</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" style="font-family:Roboto, sans-serif;font-size: 1rem;
+                          " href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" style="font-family:Roboto, sans-serif;font-size: 1rem;" href="#organize">Organize</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" style="font-family:Roboto, sans-serif;font-size: 1rem;" href="#sponsor">Sponsors</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" style="font-family:Roboto, sans-serif;font-size: 1rem;" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,7 +123,7 @@
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5" style="font-family:Roboto, sans-serif;">Atlanta’s only collegiate hackathon for gender-marginalized individuals!<br> Organizer Applications now open!</p>
+                        <p class="text-white-75 font-weight-light mb-5" style="font-family:Roboto, sans-serif;">Atlanta’s only collegiate hackathon for gender-marginalized individuals!<br> Director and Organizer Applications now open!</p>
                         <a class="btn btn-primary btn-xl js-scroll-trigger" href="http://eepurl.com/g-Lk4z" style="background-color:#FF5B4F">Notify me when applications open</a>
                     </div>
                 </div>
@@ -194,7 +195,7 @@
                 <h2> Apply to become a part of our Organizing Team for the 2021 hacking season!</h2>
                 <img src="assets/img/organizer.jpg" class="img-fluid" id="orgPic">
 
-                 <h3>Interested? Apply by September 3rd</h3>
+                 <h3>Interested? Apply by September 8th</h3>
                  <a class="btn btn-light btn-xl js-scroll-trigger" href="https://infoatlanta.typeform.com/to/wKVFkbip" style="background-color:#222A68" id="appSignupButton">Apply Here</a>
                 </div>
                 <div class="col-lg-5 text-left">
@@ -210,7 +211,7 @@
                         </div>
 
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                          <div class="card-body">
+                          <div class="card-body" id="bodyOne">
                             Oversee and implement the creation of all TechTogether websites and web applications. This includes creating an event page, a live site, and being the point of contact for anything web-based through the organizing process!
                           </div>
                         </div>
@@ -225,7 +226,7 @@
                           </h5>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                          <div class="card-body">
+                          <div class="card-body" id="bodyThree">
                             Assist the director in event planning and oversee day-to-day operations. You’ll be in charge of things like securing a venue, finalizing catering, ordering business cards - basically the logistics that help will make TechTogether Atlanta possible.
                           </div>
                         </div>
@@ -240,7 +241,7 @@
                           </h5>
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                          <div class="card-body">
+                          <div class="card-body" id="bodyFour">
                             Build and maintain relationships with the community to secure funding, speakers, workshop leaders, etc. This includes reaching out to sponsors and communicating with community members to make sure we have the support we need to put together an awesome experience for our hackers!
                           </div>
                         </div>
@@ -255,7 +256,7 @@
                           </h5>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                          <div class="card-body">
+                          <div class="card-body" id="bodyFive">
                             Help facilitate the parts of the event that make a hackathon a hackathon - this includes finalizing activities for the hackers, securing volunteers, mentors, and judges, and selecting challenges and prizes.
                           </div>
                         </div>
@@ -270,8 +271,8 @@
                           </h5>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                          <div class="card-body">
-                            Lead and implement all marketing and communication activities on behalf of TechTogether. You will be helping with creating the theme for the event, relay information about the event to the community, and generally increase awareness and enthusiasm for our hackathon. :)
+                          <div class="card-body" id="bodyTwo">
+                            Lead and implement all marketing and communication activities on behalf of TechTogether. You will be helping with creating the theme for the event, relay information about the event to the community, and generally increase awareness and enthusiasm for our hackathon.
                           </div>
                         </div>
                       </div>
@@ -285,8 +286,8 @@
                           </h5>
                         </div>
                         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                          <div class="card-body">
-                            
+                          <div class="card-body" id="bodySix">
+                          Grow and maintain TechTogether Atlanta’s branding and social media presence. Collaborate with our Marketing Team to create social media content and graphics. Expand TechTogether Atlanta’s marketing channel to a wider audience. 
                           </div>
                         </div>
                       </div>
@@ -329,11 +330,11 @@
 
 
             <!-- Footer -->
-            <footer class="py-5">
+            <footer class="py-5" id="contact">
               <div class="container">
-                <div class="small text-center text-muted">Follow TechTogether Atlanta on <a href="https://www.facebook.com/TechTogetherAtlanta" target="_blank">Facebook</a>, <a href="https://www.instagram.com/techtogetheratlanta_/" target="_blank">Instagram</a>, or <a href="https://www.linkedin.com/company/techtogether-atlanta/" target="_blank">LinkedIn</a>! <br>Got a question? Feel free to send us an email at info.atlanta@techtogether.io.</div><br>
+                <div class="small text-center text-white">Follow TechTogether Atlanta on <a href="https://www.facebook.com/TechTogetherAtlanta" target="_blank">Facebook</a>, <a href="https://www.instagram.com/techtogetheratlanta_/" target="_blank">Instagram</a>, or <a href="https://www.linkedin.com/company/techtogether-atlanta/" target="_blank">LinkedIn</a>! <br>Got a question? Feel free to send us an email at info.atlanta@techtogether.io.</div><br>
 
-                <div class="small text-center text-muted">This website was made with tons of 💗 by the <a href="https://techtogether.io/" target="_blank">TechTogether</a> Team</div>
+                <div class="small text-center text-white">This website was made with tons of 💗 by the <a href="https://techtogether.io/" target="_blank">TechTogether</a> Team</div>
               </div>
             </footer>
 
