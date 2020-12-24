@@ -6097,7 +6097,7 @@ a.close.disabled {
 
 .bg-primary {
   /*background: linear-gradient(#E73F33, #FF5B4F) !important;*/
- background-color: #FF5B4F !important;*/
+ background-color: #FF5B4F !important;
 }
 .bg-primary h1 h2 
 {
@@ -6130,7 +6130,6 @@ a.close.disabled {
   color:#fff;
 }
 
-}
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -10266,7 +10265,7 @@ header.masthead h3 {
 }
 
 
-.myaccordion .card-header {
+.myaccordion .card-header, .impact1, .impact3 {
   background-color: #B23027;
 }
 
