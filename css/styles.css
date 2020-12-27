@@ -6097,9 +6097,26 @@ a.close.disabled {
 
 .bg-primary {
   /*background: linear-gradient(#E73F33, #FF5B4F) !important;*/
- background-color: #FF5B4F !important;
+ background-color: #B23027 !important;
+
 }
-.bg-primary h1 h2 
+#about {
+  background-color: white;
+  height:600px;
+  width:500px;
+
+}
+.AboutTechTogether {
+  position: relative;
+  top:-139px;
+  left:-20px;
+  height:600px;
+  width:5000px;
+
+}
+
+
+.bg-primary h1 h2
 {
   font-family: 'Barlow', sans-serif;
   text-align: left;
@@ -10270,7 +10287,7 @@ header.masthead h3 {
 }
 
 #contact{
-  background-color:#E73F33; 
+  background-color:#E73F33;
 }
 
 #footer
