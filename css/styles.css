@@ -10311,8 +10311,12 @@ header.masthead h3 {
 }
 
 #sponsor {
-  background-color: #E73F33;
+  background-color: #FFFFFF;
 }
+
+/* #sponsor h1, h4 {
+  font-size: 150%;
+} */
 
 #sponsor h3
 {
