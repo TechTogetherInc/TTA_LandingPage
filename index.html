@@ -98,6 +98,134 @@
           background-size: cover;
         }
         </style>
+        
+        <!-- footer CSS -->
+    <style>
+                .site-footer {
+          background-color: #e73f33;
+          padding: 45px 0 20px;
+          font-size: 18px;
+          line-height: 55px;
+          color: #ffffff;
+        }
+        .site-footer a {
+          color: #737373;
+        }
+        .site-footer a:hover {
+          color: #3366cc;
+          text-decoration: none;
+        }
+        .site-footer .social-icons {
+          text-align: left;
+        }
+        .site-footer .social-icons a {
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          margin-left: 60px;
+          margin-right: 0;
+          border-radius: 100%;
+          background-color: #ffffff;
+        }
+        .develop-text {
+          margin: 0;
+          margin-top: -2%;
+          margin-left:-8%;
+        }
+        @media (max-width: 991px) {
+          .site-footer [class^="col-"] {
+            margin-bottom: 30px;
+          }
+        }
+        @media (max-width: 767px) {
+          .site-footer {
+            padding-bottom: 0;
+          }
+          .site-footer .develop-text,
+          .site-footer .social-icons {
+            text-align: left;
+          }
+        }
+        .social-icons {
+          padding-left: 0;
+          margin-bottom: 0;
+          list-style: none;
+          margin-left:-49%;
+
+        }
+        .social-icons li {
+          display: inline-block;
+          margin-bottom: 4px;
+        }
+
+        .social-icons a {
+          background-color: #eceeef;
+          color: #818a91;
+          font-size: 24px;
+          display: inline-block;
+          line-height: 44px;
+          width: 44px;
+          height: 44px;
+          text-align: center;
+          margin-right: 8px;
+          border-radius: 100%;
+          -webkit-transition: all 0.2s linear;
+          -o-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+        }
+        .social-icons a:active,
+        .social-icons a:focus,
+        .social-icons a:hover {
+          color: #fff;
+          background-color: #29aafe;
+        }
+        .social-icons.size-sm a {
+          line-height: 34px;
+          height: 34px;
+          width: 34px;
+          font-size: 14px;
+        }
+        .social-icons a.facebook:hover {
+          background-color: #3b5998;
+        }
+        .social-icons a.instagram:hover {
+          background-color: #ea4c89;
+        }
+        .social-icons a.linkedin:hover {
+          background-color: #007bb6;
+        }
+        .social-icons a.mail:hover {
+          background-color: #ff8c00;
+        }
+        @media (max-width: 767px) {
+          .social-icons li.title {
+            display: block;
+            margin-right: 0;
+            font-weight: 600;
+          }
+        }
+        .ttImg{
+          margin-left:-10%;
+          height:95px;
+          width:290px;
+          margin-bottom: 50px;
+        }
+        .footerByte{
+          height: 300px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: row;
+          margin-top: -18%;
+          margin-left: 70%;
+        }
+
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          //align-items: flex-start;
+        }
+        </style>
 
     </head>
     <body id="page-top">
@@ -277,13 +405,27 @@
 
 
             <!-- Footer -->
-            <footer class="py-5" id="contact">
-              <div class="container">
-                <div class="small text-center text-white">Follow TechTogether Atlanta on <a href="https://www.facebook.com/TechTogetherAtlanta" target="_blank">Facebook</a>, <a href="https://www.instagram.com/techtogetheratlanta_/" target="_blank">Instagram</a>, or <a href="https://www.linkedin.com/company/techtogether-atlanta/" target="_blank">LinkedIn</a>! <br>Got a question? Feel free to send us an email at info.atlanta@techtogether.io.</div><br>
-
-                <div class="small text-center text-white">This website was made with tons of 💗 by the <a href="https://techtogether.io/" target="_blank">TechTogether</a> Team</div>
-              </div>
-            </footer>
+            <footer class="site-footer">
+      <div class="container">
+        <img src= "assets/img/atlanta-logo-white.png" class="ttImg">
+        <div><div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/TechTogetherAtlanta"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/techtogetheratlanta_/"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="mail" href="mailto: info.atlanta@techtogether.io"><i class="fa fa-envelope"></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/company/techtogether-atlanta/"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+          <br> <br> 
+          <div>
+            <p class="develop-text">Developed with 🤍 by the TechTogether Atlanta Team.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      <img src= "assets\img\footerByte.png" class="footerByte">
+</footer>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
