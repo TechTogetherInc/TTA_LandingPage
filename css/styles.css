@@ -10354,3 +10354,33 @@ font-family: 'Roboto', sans-serif;
   padding-right: 15px;
 
 }
+
+#footer .row {
+  padding: 15px;
+}
+
+.footerByte {
+  float: right;
+  max-width: 200px;
+}
+
+#footer i {
+  font-size: 64px;
+}
+
+#footer a:hover {
+  color: #dfdfdf;
+}
+
+#footer a {
+  color: #ffffff;
+}
+
+#footer li {
+  padding: 15px;
+}
+
+.develop-text {
+  color: white;
+  padding-left: 15px;
+}
