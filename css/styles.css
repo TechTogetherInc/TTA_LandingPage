@@ -10085,7 +10085,7 @@ hr.light {
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: rgb(255, 87, 87);
+  background-color: #e73f33;
   transition: background-color 0.2s ease;
   
 }
@@ -10095,7 +10095,7 @@ hr.light {
   color: #212529;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
+  color: #ffffff;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-size: 0.8rem !important;
@@ -10297,6 +10297,11 @@ header.masthead h3 {
 #mainNav li.nav-item {
   margin-right: 15px;
 }
+
+#mainNav .nav-link {
+  color: white;
+}
+
 
 #contact{
   background-color:#E73F33; 
