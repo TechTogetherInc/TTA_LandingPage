@@ -6100,12 +6100,114 @@ a.close.disabled {
  background-color: #B23027 !important;
 
 }
-#about {
-  background-color: white;
-  height:600px;
-  width:500px;
+
+#containbg {
+  height: 665px;
+  width: 1600px;
+  position: relative;
+  top: -60px;
+}
+
+#BG {
+  height: 665px;
+  width: 1425px;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  background: no-repeat center fixed;
+  position: absolute;
+  top: 60px;
+  left: 0;
 
 }
+
+/* About TechTogether Atlanta TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */
+.p1 {
+  position: absolute;
+  top: 140px;
+  left: 90px;
+  width: 260px;
+  height: 100px;
+  font-size: 30px;
+  font-style: normal;
+  white-space: nowrap;
+  color: #FFFFFF;
+
+}
+
+.p2 {
+  /* TechTogether works to elevate the access, exposure, and inclusion of gender-marginalized individuals in interdisciplinary fields of technology. We do this by hosting events like hackathons, promoting inclusivity-focused research, and providing professional development resources. TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world. */
+
+position: absolute;
+width: 260px;
+height: 75px;
+left: 90px;
+top: 200px;
+
+font-family: Barlow;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+white-space: nowrap;
+
+color: #FFFFFF;
+}
+
+.p3 {
+  position: absolute;
+  top: 390px;
+  left: 990px;
+  width: 260px;
+  height: 100px;
+  font-size: 30px;
+  font-style: normal;
+  white-space: nowrap;
+
+}
+
+.p4 {
+
+  /* About TechTogether Atlanta TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */
+
+  position: absolute;
+  width: 200px;
+  height: 75px;
+  left: -280px;
+  top: 80px;
+
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap;
+  text-align: left;
+
+
+  }
+#logo2 {
+
+  /* image 1 */
+  position: absolute;
+  top: 80px;
+  left: -670px;
+  width: 300px;
+  height: 100px;
+
+
+
+
+}
+#logo1 {
+  position: absolute;
+  top: -310px;
+  left: 270px;
+  width: 300px;
+  height: 100px;
+
+}
+
 .AboutTechTogether {
   position: relative;
   top:-139px;
