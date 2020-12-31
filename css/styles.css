@@ -10294,6 +10294,10 @@ header.masthead h3 {
   background-color: #B23027;
 }
 
+#mainNav li.nav-item {
+  margin-right: 15px;
+}
+
 #contact{
   background-color:#E73F33; 
 }
