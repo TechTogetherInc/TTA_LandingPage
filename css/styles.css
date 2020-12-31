@@ -81,6 +81,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  font-family: 'Barlow', sans-serif;
   margin-bottom: 0.5rem;
 
 }
@@ -361,7 +362,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Barlow", sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -4350,7 +4351,6 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -10067,6 +10067,26 @@ hr.light {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.btn-menu {
+  padding: .5rem 1.5rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 1.25rem;
+  color: #E73F33;
+  background-color: white;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+}
+
+.btn-md {
+  padding: .75rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 1.25rem;
+}
+
 .btn-xl {
   padding: 1.25rem 2.25rem;
   font-size: 0.85rem;
@@ -10077,13 +10097,14 @@ hr.light {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 6rem 0;
 }
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: rgb(255, 87, 87);
   transition: background-color 0.2s ease;
+
 }
 #mainNav .navbar-brand {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10094,29 +10115,33 @@ hr.light {
   color: #6c757d;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.8rem !important;
   padding: 0.75rem 0;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #E73F33;
+  color: #ffffff;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #E73F33 !important;
+  color: #ffffff !important;
 }
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
-    background-color: transparent;
+    background-color: #E73F33;
+
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.808);
   }
   #mainNav .navbar-brand:hover {
     color: #fff;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.7);
-    padding: 0 1rem;
+    color: rgb(255, 255, 255);
+    /* padding: 0 1rem; */
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #fff;
@@ -10124,12 +10149,12 @@ hr.light {
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
   }
-  #mainNav.navbar-scrolled {
+  /* #mainNav.navbar-scrolled {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
   }
   #mainNav.navbar-scrolled .navbar-brand {
-    color: #212529;
+    color: #000000;
   }
   #mainNav.navbar-scrolled .navbar-brand:hover {
     color: #E73F33;
@@ -10139,7 +10164,7 @@ hr.light {
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
     color: #E73F33;
-  }
+  } */
 }
 
 header.masthead {
@@ -10303,8 +10328,12 @@ header.masthead h3 {
 }
 
 #sponsor {
-  background-color: #E73F33;
+  background-color: #FFFFFF;
 }
+
+/* #sponsor h1, h4 {
+  font-size: 150%;
+} */
 
 #sponsor h3
 {
@@ -10319,4 +10348,17 @@ header.masthead h3 {
 
 #bodyOne, #bodyTwo, #bodyThree, #bodyFour, #bodyFive, #bodySix{
 font-family: 'Roboto', sans-serif;
+}
+
+#get-involved {
+  background-color: #E73F33;
+}
+
+#get-involved .card {
+  align-items: center;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
+  padding-right: 15px;
+
 }
