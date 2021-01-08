@@ -10004,7 +10004,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #343a40 !important;
+  color: #000000 !important;
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -10408,6 +10408,19 @@ header.masthead h3 {
     font-family: 'Barlow', sans-serif;
 }
 
+#about-2 {
+  padding: 4rem 20%;
+  text-align: right;
+}
+
+#about-1 {
+  background: #A83227;
+  color: white;
+  clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+  padding: 8rem 20%;
+}
+
+
 
 .myaccordion .card-header, .impact1, .impact3 {
   background-color: #B23027;
@@ -10419,6 +10432,12 @@ header.masthead h3 {
 
 #mainNav .nav-link {
   color: white;
+}
+
+
+
+body {
+  margin: 0;
 }
 
 
@@ -10503,3 +10522,39 @@ font-family: 'Roboto', sans-serif;
   color: white;
   padding-left: 15px;
 }
+
+.countdown {
+  background-color: white;
+}
+
+.countdown .col {
+  font-size: 2.5em;
+  background-color: black;
+  color: white;
+}
+
+.countdown h1 {
+  font-weight: 700;
+}
+.countdown .col {
+  color: white;
+}
+
+.btn-header {
+  color: #E73F33;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 640px) 
+{
+    #masthead-img
+    {
+        display: none;
+    }
+
+    #about-img{
+      display: none;
+    }
+}
+

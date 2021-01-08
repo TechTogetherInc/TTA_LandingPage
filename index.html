@@ -30,6 +30,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        
         <!---Parallax effect-->
         <style>
         .parallax {
@@ -92,9 +93,38 @@
         }
         </style>
 
+        <script>
+          // Set the date we're counting down to
+          var countDownDate = new Date("Feb 26, 2021 18:00:00").getTime();
 
+          // Update the count down every 1 second
+          var x = setInterval(function() {
 
-
+            // Get today's date and time
+            var now = new Date().getTime();
+              
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+              
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              
+            // Output the result in an element with id="countdown"
+            document.getElementById("days").innerHTML = "<strong>"+days +"</strong>"; 
+            document.getElementById("hours").innerHTML = "<strong>"+hours+"</strong>";
+            document.getElementById("minutes").innerHTML = "<strong>"+minutes+"</strong>";
+            document.getElementById("seconds").innerHTML = "<strong>"+seconds+"</strong>";
+              
+            // If the count down is over, write some text 
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+          }, 1000);
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -118,17 +148,34 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead" style="min-height: 1000px">
             <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-10 align-self-end">
+                <div class="row h-100" style="padding-top: 2em;">
+                    <div class="col align-items-left">
                         <h1 class="text-white font-weight-bold">TechTogether Atlanta</h1>
-                        <h3>Virtual Hackathon | February 26th - 28th, 2021</h3>
-                        <hr class="divider my-4" />
+                        <h3 class="text-white">Virtual Hackathon | February 26th - 28th, 2021</h3>
+                        <p class="text-white font-weight-light mb-5" style="font-family:Roboto, sans-serif;">Atlanta’s only collegiate hackathon for gender-marginalized individuals!<br> Registration for TechTogether Atlanta is now open!</p>
+                        <div id="countdown" >
+                          <div class="row" style="color: white;">
+                            <div class="col"><h1 id="days"><strong></strong></h1><h5>Days</h5></div>
+                            <div class="col"><h1 id="hours"></h1><h5>Hours</h5></div>
+                            <div class="col"><h1 id="minutes"></h1><h5>Minutes</h5></div>
+                            <div class="col"><h1 id="seconds"></h1><h5>Seconds</h5></div>
+                          </div>
+                        </div>
+                        <div class="row" style="padding-top: 30px;">
+                          <div class="col">
+                            <a class="btn btn-header btn-xl js-scroll-trigger" href="https://www.eventbrite.com/e/techtogether-atlanta-2021-tickets-132143190841" style="width: 100%;">Register to Attend</a>
+                          </div>
+                          <div class="col">
+                            <a class="btn btn-header btn-xl js-scroll-trigger" href="https://www.eventbrite.com/e/techtogether-atlanta-2021-tickets-132143190841" style="width: 100%;">Notify Me</a>
+                          </div>
+                        </div>
+   
                     </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5" style="font-family:Roboto, sans-serif;">Atlanta’s only collegiate hackathon for gender-marginalized individuals!<br> Registration for TechTogether Atlanta is now open!</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.eventbrite.com/e/techtogether-atlanta-2021-tickets-132143190841" style="background-color:#FF5B4F">Register to Attend</a>
+                    <div class="col text-center" id="masthead-img">
+                        <img src="assets/img/Masthead-Byte.png">
+                        
                     </div>
                 </div>
             </div>
@@ -136,19 +183,50 @@
 
 
         <!-- About-->
-            <div class="container1" id="containbg">
-                <img src="assets/img/AboutUsUpdated.png" id="BG">
-                <p class="p1">About TechTogether</p>
-                <p class="p2">TechTogether works to elevate the access, exposure, and inclusion <br> of gender-marginalized individuals in interdisciplinary fields
-                of technology.<br> We do this by hosting events like hackathons, promoting inclusivity-focused research, <br> and providing professional development resources.
-                TechTogether was founded in 2017 as SheHacks<br> by 13 college students across Boston. What was once a one-time event is now a national organization <br> that serves individuals around the world.</p>
-                <p3 class="p3">About TechTogether Atlanta</p>
-                <p4 class="p4">TechTogether was founded in 2017 as SheHacks by 13 college students across Boston.<br>What was once a one-time event is now a national organization that serves individuals<br>around the world.</p>
-                <img src="assets/img/logo2.png" id="logo2">
-                <img src="assets/img/logo1.png" id="logo1">
+      <!-- <div id="about">
+        <div id="about-1">
+          <div class="row">
+            <div class="col-12 col-md-8">
+              <h1>About TechTogether</h1>
+          <h4>TechTogether works to elevate the access, exposure, and inclusion of gender-marginalized individuals in interdisciplinary fields of technology. We do this by hosting events like hackathons, promoting inclusivity-focused research, and providing professional development resources.</br>
+          </br>TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world.</h4>
+            </div>
+          </div>
+        </div>
+        <div id="about-2">
+          <div class="row">
+            <div class="col-12 col-md-8">
+              <h1>About TechTogether</h1>
+              <h4>TechTogether Atlanta is Atlanta’s only collegiate hackathon for gender-marginalized individuals. With a team from all over the world, Tech Together Atlanta is striving to provide support and oppertunities virtually to students.</h4>
+              </br>
+            </div> 
+          </div>
+        </div>
+      </div> -->
 
-
-              </div>
+      <div id="about">
+        <div id="about-1">
+          <div class="row">
+            <div class="col-12 col-md-8">
+              <h1>About TechTogether</h1>
+          <h5>TechTogether works to elevate the access, exposure, and inclusion of gender-marginalized individuals in interdisciplinary fields of technology. We do this by hosting events like hackathons, promoting inclusivity-focused research, and providing professional development resources.</br>
+          </br>TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world.</h5>
+            </div>
+            <div class="col-6 col-md-4" id="about-img"><img style="width: 100%;  padding-top: 10%;" src="assets/img/tech-together-logo-white.png"></div>
+          </div>
+          
+        </div>
+        <div id="about-2">
+          <div class="row">
+            <div class="col-6 col-md-4" id="about-img"><img style="width: 100%;  padding-top: 10%;" src="assets/img/atlanta-logo-black.png"></div>
+            <div class="col-12 col-md-8">
+              <h1>About TechTogether</h1>
+          <h5>TechTogether Atlanta is Atlanta’s only collegiate hackathon for gender-marginalized individuals. With a team from all over the world, Tech Together Atlanta is striving to provide support and oppertunities virtually to students.</h5>
+          </br>
+            </div>  
+          </div>
+        </div>
+      </div>
 
     <!--End of About Section -->
 
@@ -186,8 +264,8 @@
     <section class="page-section" id="get-involved">
       <div class="container">
         <h1 class="text-light display-4" style="padding-bottom: 30px;">Get Involved</h1>
-        <div class="row card-deck">
-          <div class="row card">
+        <div class="row card-deck" style="padding: 30px 30px 0px 30px;">
+          <div class="row card" style="padding: 10px;">
             <div class="col-5 card-body">
             <img style="width: 100%;" src="assets/img/WorkshopLeadByte.svg" alt="Card image cap">
             </div>
@@ -198,7 +276,7 @@
                 <a class="btn btn-primary btn-md float-right text-light" href="https://forms.gle/VW5skD8hrhF7nmK16" style="background-color:#E73F33" id="appSignupButton">Sign Up<br></a>
               </div>
           </div>
-          <div class="row card">
+          <div class="row card" style="padding: 10px;">
             <div class="col-7 card-body">
             <img style="width: 100%;" src="assets/img/MentorByte.svg" alt="Card image cap">
             </div>
@@ -210,8 +288,8 @@
               </div>
           </div>
         </div>
-        <div class="row card-deck" style="padding-top: 30px;">
-          <div class="row card">
+        <div class="row card-deck" style="padding: 30px;">
+          <div class="row card" style="padding: 10px;">
             <div class="col-5 card-body">
             <img style="width: 100%;" src="assets/img/JudgeByte.svg" alt="Card image cap">
             </div>
@@ -222,7 +300,7 @@
                 <a class="btn btn-primary btn-md float-right text-light disabled" href="" style="background-color:#E73F33" id="appSignupButton">Coming Soon<br></a>
               </div>
           </div>
-          <div class="row card">
+          <div class="row card" style="padding: 10px;">
             <div class="col-5 card-body">
             <img style="width: 100%;" src="assets/img/VolunteerByte.svg" alt="Card image cap">
             </div>
@@ -256,7 +334,7 @@
                     <div class= "container-fluid">
                       <h1 class="text-primary" style="font-family:Barlow, sans-serif; font-size: 3em" id="sponsorTitle">Sponsor Us</h1>
                       <h4 class="text-primary" style="font-family:Barlow, sans-serif; font-size: 1.7em" id="sponsorTitle">Start your Recruiting Season with TechTogether Atlanta 2021</h4>
-                      <p class="text-primary mb-4" id="aboutText" style="font-family:Roboto, sans-serif; font-size: 1.15rem;">TechTogether is unique in that on average 50% of our applicants have never attended a hackathon before. As a recruiter, this allows you to reach a pool of talent that you aren't going to find at other hackathons or events. Fill out our interest form to learn more about opportunities to work with our chapter.</p>
+                      <p class="text-dark mb-4" id="aboutText" style="font-family:Roboto, sans-serif; font-size: 1.15rem;">TechTogether is unique in that on average 50% of our applicants have never attended a hackathon before. As a recruiter, this allows you to reach a pool of talent that you aren't going to find at other hackathons or events. Fill out our interest form to learn more about opportunities to work with our chapter.</p>
                       <a class="btn btn-primary btn-xl js-scroll-trigger float-right" href="https://infoatlanta.typeform.com/to/VRkZebbp" id="appSignupButton">Interested in sponsoring?<br></a>
                     </div>
                   </div>
@@ -282,7 +360,7 @@
                 </h5>
               </div>
               <br> <br>
-              <div class="col">
+              <div class="col" id="about-img">
                 <img src= "assets\img\footerByte.png" class="footerByte">
               </div>
             </div>
