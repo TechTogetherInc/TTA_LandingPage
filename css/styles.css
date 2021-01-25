@@ -10567,6 +10567,28 @@ font-family: 'Roboto', sans-serif;
   color: white;
 }
 
+/*-------- Tracks ----------- */
+#tracks .card {
+  box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#tracks .card-title img {
+  height: 250px;
+}
+
+.slick-dots li {
+  width: auto;
+}
+
+.pager__item {
+  padding: 0 12px;
+  margin-right: 3rem;
+  display: block;
+  border: 1px solid red;
+}
+
+/* ------------------------- */
+
 .btn-header {
   color: #E73F33;
   background-color: #fff;
