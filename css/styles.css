@@ -10421,10 +10421,14 @@ header.masthead h3 {
 }
 
 #speakers .mosaic {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(9, 1fr);
   align-items: center;
   /* position:relative; */
+}
+
+.mobile-card, .circle-image {
+  display: none;
 }
 
 .mosaic-item-top-card-1 {
@@ -10434,6 +10438,8 @@ header.masthead h3 {
 }
 
 .mosaic-item-bottom-card-1 {
+  border-radius: 66px; 
+  background-color: rgba(255, 91, 79, 0.16);
   grid-row: 1;
   grid-column: 2 / -1;
 }
@@ -10445,8 +10451,61 @@ header.masthead h3 {
 }
 
 .mosaic-item-bottom-card-2 {
+  border-radius: 66px; 
+  background-color: rgba(255, 91, 79, 0.16);
   grid-row: 1;
   grid-column: 1 / 9;
+}
+
+.circle-image-desktop {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background-color: #E73F33;
+}
+
+@media (max-width: 640px) {
+  .mosaic-item-top-card-1, .mosaic-item-bottom-card-1, .mosaic-item-top-card-2, .mosaic-item-bottom-card-2, .circle-image-desktop {
+    display: none;
+  }
+
+  /* #speakers .mosaic {
+    display: grid;
+    grid-template-rows: repeat(9, 20px);
+    align-items: center;
+  } */
+
+  .mobile-card {
+    border-radius: 56px; 
+    background-color: rgba(255, 91, 79, 0.16);
+    display: block;
+  }
+
+  .circle-image {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E73F33;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 35px;
+  }
+
+  /* .mobile-top-card {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    z-index: 1;
+  }
+
+  .mobile-bottom-card {
+    border-radius: 56px; 
+    background-color: rgba(255, 91, 79, 0.16);
+    display: block;
+    grid-column: 1;
+    grid-row: 2 / -1;
+  } */
 }
 
 .myaccordion .card-header, .impact1, .impact3 {
