@@ -129,6 +129,20 @@
         document.getElementById("countdown").innerHTML = "EXPIRED";
       }
     }, 1000);
+
+    // imagine you've got the ISO string from the system
+    const isoString = new Date().toISOString();
+
+    const options = { month: "long", day: "numeric", year: "numeric" };
+    const date = new Date(isoString);
+    const americanDate = new Intl.DateTimeFormat("en-US", options).format(date);
+
+    const time = document.createElement("time");
+    time.setAttribute("datetime", isoString);
+    // forgive me father for I have sinned with innerText!
+    time.innerText = `Published on ${americanDate}`;
+
+    document.body.appendChild(time);
   </script>
 </head>
 
@@ -379,7 +393,66 @@
   </section>
 
   <!-- end speaker section -->
-
+  <section class="page-section" id="schedule" style="background-image: url(assets/img/hacker-schedule.png);">
+    <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <table class="table">
+              <thead class="thead-red">
+                <tr>
+                  <th scope="col">Time</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">+ to Cal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><time datetime="2020-02-05T16:30:41.392Z">Published on ...</time></td>
+                  <td>Team Formation</td>
+                  <td><h5><span class="badge badge-secondary">Social</span></h5></td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td scope="row">3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+    
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+        </div>
+        
+      </div>
+      <div class="col-1">
+        <h2 id="upright">Schedule</h2>
+      </div>
+    </div>
+  </div>
+  </section>
 
 
   <!-- Impact Section -->
@@ -658,12 +731,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
   <!-- Third party plugin JS-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
   <script src="js/func.js"></script>
+  <script src="js/time.js"></script>
 </body>
 
 </html>

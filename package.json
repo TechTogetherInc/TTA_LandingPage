@@ -1,0 +1,24 @@
+{
+  "name": "koates7.github.io",
+  "version": "1.0.0",
+  "description": "Atlanta’s only collegiate hackathon for gender-marginalized individuals!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechTogetherInc/TTA_LandingPage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechTogetherInc/TTA_LandingPage/issues"
+  },
+  "homepage": "https://github.com/TechTogetherInc/TTA_LandingPage#readme",
+  "dependencies": {
+    "jstz": "^2.1.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.32"
+  }
+}

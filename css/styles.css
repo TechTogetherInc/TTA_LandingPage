@@ -10531,6 +10531,40 @@ body {
   background-color:#E73F33;
 }
 
+#upright {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#schedule {
+  min-height: 500px;
+}
+
+#schedule thead th {
+  background-color: #A83227;
+  color: white;
+}
+
+#schedule tr:nth-child(even) {
+  background-color: #EEEEEE;
+}
+#schedule tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+#schedule .nav-pills .nav-link {
+  background: white;
+  color: #A83227
+}
+
+#schedule .nav-item {
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
 #footer
 {
   background-color:#B23027;
