@@ -10464,7 +10464,7 @@ header.masthead h3 {
   background-color: #E73F33;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .mosaic-item-top-card-1, .mosaic-item-bottom-card-1, .mosaic-item-top-card-2, .mosaic-item-bottom-card-2, .circle-image-desktop {
     display: none;
   }
