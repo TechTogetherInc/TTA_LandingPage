@@ -20,6 +20,11 @@
     }
   });
 
+  
+
+        
+  }());
+
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {
     $('.navbar-collapse').collapse('hide');
@@ -58,6 +63,42 @@
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
+  });
+
+  // inViewPort plugin setup in jquery
+  $(function($, win) {
+    $.fn.inViewport = function(cb) {
+      return this.each(function(i,el){
+        function visPx(){
+          var H = $(this).height(),
+              r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+          return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));  
+        } visPx();
+        $(win).on("resize scroll", visPx);
+      });
+    };
+  }(jQuery, window));
+  
+
+
+  
+  jQuery(function($) {
+  
+    // impact section counter number animation
+    $(".counter").inViewport(function(px) { 
+      if(px>0 && !this.initNumAnim) { 
+        this.initNumAnim = true;
+        $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 2000,
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });         
+      }
+    });
+  
   });
 
 })(jQuery); // End of use strict

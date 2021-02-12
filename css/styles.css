@@ -60,7 +60,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Barlow', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -81,6 +81,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  font-family: 'Barlow', sans-serif;
   margin-bottom: 0.5rem;
 
 }
@@ -361,7 +362,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Barlow", sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -4350,7 +4351,6 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -6097,9 +6097,128 @@ a.close.disabled {
 
 .bg-primary {
   /*background: linear-gradient(#E73F33, #FF5B4F) !important;*/
- background-color: #FF5B4F !important;*/
+ background-color: #B23027 !important;
+
 }
-.bg-primary h1 h2 
+
+#containbg {
+  height: 665px;
+  width: 1600px;
+  position: relative;
+  top: -60px;
+}
+
+#BG {
+  height: 665px;
+  width: 1425px;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  background: no-repeat center fixed;
+  position: absolute;
+  top: 60px;
+  left: 0;
+
+}
+
+/* About TechTogether Atlanta TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */
+.p1 {
+  position: absolute;
+  top: 140px;
+  left: 90px;
+  width: 260px;
+  height: 100px;
+  font-size: 30px;
+  font-style: normal;
+  white-space: nowrap;
+  color: #FFFFFF;
+
+}
+
+.p2 {
+  /* TechTogether works to elevate the access, exposure, and inclusion of gender-marginalized individuals in interdisciplinary fields of technology. We do this by hosting events like hackathons, promoting inclusivity-focused research, and providing professional development resources. TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world. */
+
+position: absolute;
+width: 260px;
+height: 75px;
+left: 90px;
+top: 200px;
+
+font-family: Barlow;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+white-space: nowrap;
+
+color: #FFFFFF;
+}
+
+.p3 {
+  position: absolute;
+  top: 390px;
+  left: 990px;
+  width: 260px;
+  height: 100px;
+  font-size: 30px;
+  font-style: normal;
+  white-space: nowrap;
+
+}
+
+.p4 {
+
+  /* About TechTogether Atlanta TechTogether was founded in 2017 as SheHacks by 13 college students across Boston. What was once a one-time event is now a national organization that serves individuals around the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */
+
+  position: absolute;
+  width: 200px;
+  height: 75px;
+  left: -280px;
+  top: 80px;
+
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap;
+  text-align: left;
+
+
+  }
+#logo2 {
+
+  /* image 1 */
+  position: absolute;
+  top: 80px;
+  left: -670px;
+  width: 300px;
+  height: 100px;
+
+
+
+
+}
+#logo1 {
+  position: absolute;
+  top: -310px;
+  left: 270px;
+  width: 300px;
+  height: 100px;
+
+}
+
+.AboutTechTogether {
+  position: relative;
+  top:-139px;
+  left:-20px;
+  height:600px;
+  width:5000px;
+
+}
+
+
+.bg-primary h1 h2
 {
   font-family: 'Barlow', sans-serif;
   text-align: left;
@@ -6130,7 +6249,6 @@ a.close.disabled {
   color:#fff;
 }
 
-}
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -9886,7 +10004,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #343a40 !important;
+  color: #000000 !important;
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -10051,6 +10169,26 @@ hr.light {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.btn-menu {
+  padding: .5rem 1.5rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 1.25rem;
+  color: #E73F33;
+  background-color: white;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+}
+
+.btn-md {
+  padding: .75rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 1.25rem;
+}
+
 .btn-xl {
   padding: 1.25rem 2.25rem;
   font-size: 0.85rem;
@@ -10061,13 +10199,14 @@ hr.light {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 6rem 0;
 }
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: #e73f33;
   transition: background-color 0.2s ease;
+
 }
 #mainNav .navbar-brand {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10075,32 +10214,36 @@ hr.light {
   color: #212529;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
+  color: #ffffff;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.8rem !important;
   padding: 0.75rem 0;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #E73F33;
+  color: #ffffff;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #E73F33 !important;
+  color: #ffffff !important;
 }
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
-    background-color: transparent;
+    background-color: #E73F33;
+
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.808);
   }
   #mainNav .navbar-brand:hover {
     color: #fff;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.7);
-    padding: 0 1rem;
+    color: rgb(255, 255, 255);
+    /* padding: 0 1rem; */
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #fff;
@@ -10108,12 +10251,12 @@ hr.light {
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
   }
-  #mainNav.navbar-scrolled {
+  /* #mainNav.navbar-scrolled {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
   }
   #mainNav.navbar-scrolled .navbar-brand {
-    color: #212529;
+    color: #000000;
   }
   #mainNav.navbar-scrolled .navbar-brand:hover {
     color: #E73F33;
@@ -10123,7 +10266,7 @@ hr.light {
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
     color: #E73F33;
-  }
+  } */
 }
 
 header.masthead {
@@ -10265,14 +10408,311 @@ header.masthead h3 {
     font-family: 'Barlow', sans-serif;
 }
 
+#about-2 {
+  padding: 4rem 20%;
+  text-align: right;
+}
 
-.myaccordion .card-header {
+#about-1 {
+  background: #A83227;
+  color: white;
+  clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+  padding: 8rem 20%;
+}
+
+section#speakers {
+  display: none;
+}
+
+#speakers .mosaic {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  /* position:relative; */
+}
+
+.mobile-card, .circle-image {
+  display: none;
+}
+
+.mosaic-item-top-card-1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  z-index: 1;
+}
+
+.mosaic-item-bottom-card-1 {
+  border-radius: 66px; 
+  background-color: rgba(255, 91, 79, 0.16);
+  grid-row: 1;
+  grid-column: 2 / -1;
+}
+
+.mosaic-item-top-card-2 {
+  grid-column: 11 / -1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+.mosaic-item-bottom-card-2 {
+  border-radius: 66px; 
+  background-color: rgba(255, 91, 79, 0.16);
+  grid-row: 1;
+  grid-column: 1 / 12;
+}
+
+.circle-image-desktop {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background-color: #E73F33;
+}
+
+@media (max-width: 1000px) {
+  .mosaic-item-top-card-1, .mosaic-item-bottom-card-1, .mosaic-item-top-card-2, .mosaic-item-bottom-card-2, .circle-image-desktop {
+    display: none;
+  }
+
+  /* #speakers .mosaic {
+    display: grid;
+    grid-template-rows: repeat(9, 20px);
+    align-items: center;
+  } */
+
+  .mobile-card {
+    border-radius: 56px; 
+    background-color: rgba(255, 91, 79, 0.16);
+    display: block;
+  }
+
+  .circle-image {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E73F33;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 35px;
+  }
+
+  /* .mobile-top-card {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    z-index: 1;
+  }
+
+  .mobile-bottom-card {
+    border-radius: 56px; 
+    background-color: rgba(255, 91, 79, 0.16);
+    display: block;
+    grid-column: 1;
+    grid-row: 2 / -1;
+  } */
+}
+
+.myaccordion .card-header, .impact1, .impact3 {
   background-color: #B23027;
 }
 
-#contact{
-  background-color:#E73F33; 
+#mainNav li.nav-item {
+  margin-right: 15px;
 }
+
+#mainNav .nav-link {
+  color: white;
+}
+
+
+
+body {
+  margin: 0;
+}
+
+
+#contact{
+  background-color:#E73F33;
+}
+
+#upright {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+section#schedule1 {
+  display: none;
+}
+
+#schedule {
+  min-height: 500px;
+}
+
+#schedule thead th {
+  background-color: #A83227;
+  color: white;
+}
+
+#schedule tr:nth-child(even) {
+  background-color: #EEEEEE;
+}
+#schedule tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+#schedule .nav-pills .nav-link {
+  background: white;
+  color: #A83227
+}
+
+#schedule .nav-item {
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+section#schedule2 {
+  background-color: #E73F33;
+}
+
+/*activity*/
+#card5, #card10, #card13, #card15, #card21, #card32, #card33, #card34, #card36,#card4 {
+    border-left: 10px solid #40bb53;
+}
+
+/*workshop*/
+ #card6, #card7, #card8, #card9, #card11, #card12, #card14, #card16, #card17, #card18, #card19,
+#card20, #card22, #card23, #card24, #card25, #card26, #card27, #card28, #card29, #card30, #card31,
+#card35, #card37, #card38, #card39, #card40, #card41, #card42, #card43, #card44, #card45,#card49, #card50 {
+    border-left: 10px solid #5568ab;
+}
+
+/*universal*/
+#card1, #card2, #card3, #card46, #card47, #card48 {
+    border-left: 10px solid #ff0000;
+}
+
+
+.s-card1 {
+    margin: auto;
+    position: relative;
+    flex-direction: column;
+    max-width: 65%;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    display: block;
+}
+
+.s-card2 {
+    margin: auto;
+    position: relative;
+    flex-direction: column;
+    max-width: 65%;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    display: none;
+}
+
+.s-card3 {
+    margin: auto;
+    position: relative;
+    flex-direction: column;
+    max-width: 65%;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    display: none;
+}
+
+tr > .event {
+    width: 65%;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .s-card {
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 65%;
+        background-color: #fff;
+        background-clip: border-box;
+        border: none;
+        border-radius: 0.25rem;
+        border-top-style: none;
+        border-bottom-style: none;
+    }
+
+    tr > .event {
+        width: 65%;
+        font-size: 10px;
+    }
+
+    #card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9,
+    #card10, #card11, #card12, #card13, #card14, #card15, #card16, #card17,
+    #card18, #card19, #card20, #card21, #card22, #card23, #card24, #card25,
+    #card26, #card27, #card28, #card29, #card30, #card31, #card32, #card33,
+    #card34, #card35, #card36, #card37, #card38, #card39, #card40, #card41,
+    #card42, #card43, #card44, #card45, #card46, #card47, #card48 {
+        border-top-style: none;
+        border-bottom-style: none;
+    }
+}
+
+.schedule-tabs {
+    max-width: 900px;
+    height: fit-content;
+    margin: 30px auto;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    color: #123b6;
+}
+
+.tab, .active {
+    width: 30%;
+    float: left;
+    text-align: center;
+    height: 50px;
+    background-color: #4160a3;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tabs {
+    margin-left: 9.5%;
+}
+
+    #tabs button {
+        color: #ffffff;
+        border-radius: 2px;
+        vertical-align: middle;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+
+        #tabs button.active {
+            background-color: #123b6b;
+        }
+
+        #tabs button:hover {
+            background-color: #ffffff;
+            text-decoration: none;
+            color: #123b6b;
+        }
+
+
+
+
 
 #footer
 {
@@ -10285,6 +10725,14 @@ header.masthead h3 {
 #logos h4{
   color:#222A68;
 }
+
+#sponsor {
+  background-color: #FFFFFF;
+}
+
+/* #sponsor h1, h4 {
+  font-size: 150%;
+} */
 
 #sponsor h3
 {
@@ -10300,3 +10748,104 @@ header.masthead h3 {
 #bodyOne, #bodyTwo, #bodyThree, #bodyFour, #bodyFive, #bodySix{
 font-family: 'Roboto', sans-serif;
 }
+
+#get-involved {
+  background-color: #E73F33;
+}
+
+#get-involved .card {
+  align-items: center;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
+  padding-right: 15px;
+
+}
+
+#footer .row {
+  padding: 15px;
+}
+
+.footerByte {
+  float: right;
+  max-width: 200px;
+}
+
+#footer i {
+  font-size: 64px;
+}
+
+#footer a:hover {
+  color: #dfdfdf;
+}
+
+#footer a {
+  color: #ffffff;
+}
+
+#footer li {
+  padding: 15px;
+}
+
+.develop-text {
+  color: white;
+  padding-left: 15px;
+}
+
+.countdown {
+  background-color: white;
+}
+
+.countdown .col {
+  font-size: 2.5em;
+  background-color: black;
+  color: white;
+}
+
+.countdown h1 {
+  font-weight: 700;
+}
+.countdown .col {
+  color: white;
+}
+
+/*-------- Tracks ----------- */
+#tracks .card {
+  box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#tracks .card-title img {
+  height: 250px;
+}
+
+.slick-dots li {
+  width: auto;
+}
+
+.pager__item {
+  padding: 0 12px;
+  margin-right: 3rem;
+  display: block;
+  border: 1px solid red;
+}
+
+/* ------------------------- */
+
+.btn-header {
+  color: #E73F33;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 640px) 
+{
+    #masthead-img
+    {
+        display: none;
+    }
+
+    #about-img{
+      display: none;
+    }
+}
+
