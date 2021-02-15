@@ -36,9 +36,6 @@
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
 
-  
-    <link href="css/main.css" rel="stylesheet">
-
   <!---Parallax effect-->
   <style>
     .parallax {
@@ -123,44 +120,45 @@
     }
 
     @media only screen and (max-width: 1200px) {
-    div.challenge-card{
-      height: 750px;
+      div.challenge-card{
+        height: 750px;
+      }
     }
   </style>
 
   <script>
-    // Set the date we're counting down to
+    /* Set the date we're counting down to */
     var countDownDate = new Date("Feb 26, 2021 18:00:00").getTime();
 
-    // Update the count down every 1 second
+    /* Update the count down every 1 second */
     var x = setInterval(function () {
 
-      // Get today's date and time
+      /* Get today's date and time */
       var now = new Date().getTime();
 
-      // Find the distance between now and the count down date
+      /* Find the distance between now and the count down date */
       var distance = countDownDate - now;
 
-      // Time calculations for days, hours, minutes and seconds
+      /* Time calculations for days, hours, minutes and seconds */
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Output the result in an element with id="countdown"
+      /* Output the result in an element with id="countdown" */
       document.getElementById("days").innerHTML = "<strong>" + days + "</strong>";
       document.getElementById("hours").innerHTML = "<strong>" + hours + "</strong>";
       document.getElementById("minutes").innerHTML = "<strong>" + minutes + "</strong>";
       document.getElementById("seconds").innerHTML = "<strong>" + seconds + "</strong>";
 
-      // If the count down is over, write some text 
+      /* If the count down is over, write some text  */
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "EXPIRED";
       }
     }, 1000);
 
-    // imagine you've got the ISO string from the system
+    /* imagine you've got the ISO string from the system */
     const isoString = new Date().toISOString();
 
     const options = { month: "long", day: "numeric", year: "numeric" };
@@ -169,17 +167,16 @@
 
     const time = document.createElement("time");
     time.setAttribute("datetime", isoString);
-    // forgive me father for I have sinned with innerText!
+    /* forgive me father for I have sinned with innerText! */
     time.innerText = `Published on ${americanDate}`;
-
-    document.body.appendChild(time);
+    /* document.body.appendChild(time); */
   </script>
 
   
 </head>
 
 <body id="page-top">
-  <!-- Navigation-->
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/atlanta-logo-white.png" id="logo"
@@ -218,8 +215,11 @@
         <div class="col align-items-left">
           <h1 class="text-white font-weight-bold">TechTogether Atlanta</h1>
           <h3 class="text-white">Virtual Hackathon | February 26th - 28th, 2021</h3>
-          <p class="text-white font-weight-light mb-5" style="font-family:Roboto, sans-serif;">Atlanta's hackathon for gender-marginalized individuals!<br> Registration for TechTogether Atlanta is now
-            open!</p>
+          <p class="text-white font-weight-light mb-5" style="font-family:Roboto, sans-serif;">
+            Atlanta's hackathon for gender-marginalized individuals!
+            <br> 
+            Registration for TechTogether Atlanta is now open!
+          </p>
           <div id="countdown">
             <div class="row" style="color: white;">
               <div class="col">
@@ -520,7 +520,7 @@
 
   <section class="page-section" id="get-involved">
       <div class="container">
-        <h1 class="text-light display-4" style="padding-bottom: 30px;">Get Involved</h1>
+        <h1 class="text-light text-center display-4" style="padding-bottom: 30px;">Get Involved</h1>
         <div class="row card-deck" style="padding: 30px 30px 0px 30px;">
           <div class="row card" style="padding: 10px;">
             <div class="col-5 card-body">
@@ -576,6 +576,7 @@
   <!-- Tracks section -->
   <section class="page-section" id="tracks">
     <div class="container">
+      <h1 class="display-4 text-center" style="margin-bottom: 30px;">Challenges</h1>
       <div class="slider card-deck">
 
         <!-- Track 1 -->
@@ -1306,35 +1307,6 @@
 
   <!--Sponsor Section-->
   <section class="page-section" id="sponsor">
-    <!-- <div class="container">
-      <div class="row">
-
-        <div class="col-12 col-md-7">
-          <h5 class="text-primary font-weight-bolder mb-4" style="font-family:Barlow, sans-serif; font-size: x-large;"
-            id="sponsorTitle">Previous TechTogether Partners</h5>
-          <img src="assets/img/logoim3.png" class="img-fluid mb-6"
-            alt="15 Sponsors: Atlassian, Bloomberg, AWS, CapitalOne, Wolfram Language, Queens College HireQC, Essteem, Facebook, Girls Who code, Dell Technologies, Spark!, Hack+, NISA (Empowering Muslim Women), GitHub, JPMorgan Chase & Co"
-            style="max-width:90%" id="logoImg">
-        </div>
-
-
-        <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
-          <div class="container-fluid">
-            <h1 class="text-primary" style="font-family:Barlow, sans-serif; font-size: 3em" id="sponsorTitle">Sponsor Us
-            </h1>
-            <h4 class="text-primary" style="font-family:Barlow, sans-serif; font-size: 1.7em" id="sponsorTitle">Start
-              your Recruiting Season with TechTogether Atlanta 2021</h4>
-            <p class="text-dark mb-4" id="aboutText" style="font-family:Roboto, sans-serif; font-size: 1.15rem;">
-              TechTogether is unique in that on average 50% of our applicants have never attended a hackathon before. As
-              a recruiter, this allows you to reach a pool of talent that you aren't going to find at other hackathons
-              or events. Fill out our interest form to learn more about opportunities to work with our chapter.</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger float-right"
-              href="https://infoatlanta.typeform.com/to/VRkZebbp" id="appSignupButton">Interested in sponsoring?<br></a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="container" id="sponsor">
       <style type="text/css">
         a:hover {
@@ -1344,7 +1316,7 @@
             <div class="linebox-container position-relative">
                 <div class="linebox"></div>
                 <div class="get-inv-bg titlebox">
-                    <h1 class="text-dark display-4">Our Sponsors</h1><br>
+                    <h1 class="text-center display-4">Our Sponsors</h1><br>
                 </div>
                 <div class="contentbox titlebox d-flex align-items-center justify-content-center flex-wrap">
                     <div class="row flex-grow ">
