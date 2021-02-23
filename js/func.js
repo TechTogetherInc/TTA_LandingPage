@@ -4,7 +4,7 @@ $(document).ready(function(){
   $('.slider').slick({
     dots: true,
     infinite: true,
-    centerMode: true, // Remove this if you dont want a bit of content to appear on the side (from box 4 and 5)
+    centerMode: true,
     speed: 800,
     autoplay: true,
     autoplaySpeed: 2000,
