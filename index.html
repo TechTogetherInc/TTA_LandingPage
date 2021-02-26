@@ -145,17 +145,20 @@
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+      /* If the count down is over, write some text  */
+      if (distance < 0) {
+        clearInterval(x);
+        days = 0;
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+      }
+
       /* Output the result in an element with id="countdown" */
       document.getElementById("days").innerHTML = "<strong>" + days + "</strong>";
       document.getElementById("hours").innerHTML = "<strong>" + hours + "</strong>";
       document.getElementById("minutes").innerHTML = "<strong>" + minutes + "</strong>";
       document.getElementById("seconds").innerHTML = "<strong>" + seconds + "</strong>";
-
-      /* If the count down is over, write some text  */
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-      }
     }, 1000);
 
     /* imagine you've got the ISO string from the system */
@@ -228,19 +231,19 @@
           <div id="countdown">
             <div class="row" style="color: white;">
               <div class="col">
-                <h1 id="days"><strong></strong></h1>
+                <h1 id="days"><strong>0</strong></h1>
                 <h5>Days</h5>
               </div>
               <div class="col">
-                <h1 id="hours"></h1>
+                <h1 id="hours">0</h1>
                 <h5>Hours</h5>
               </div>
               <div class="col">
-                <h1 id="minutes"></h1>
+                <h1 id="minutes">0</h1>
                 <h5>Minutes</h5>
               </div>
               <div class="col">
-                <h1 id="seconds"></h1>
+                <h1 id="seconds">0</h1>
                 <h5>Seconds</h5>
               </div>
             </div>
@@ -248,9 +251,14 @@
           <div class="row" style="padding-top: 30px;">
             <div class="col">
               <a class="btn btn-header btn-xl js-scroll-trigger"
-                href="https://www.eventbrite.com/e/techtogether-atlanta-2021-tickets-132143190841"
-                style="width: 100%;">Register to Attend</a>
+                href="https://techtogether-atlanta.devpost.com/"
+                style="width: 100%;">View Challenges</a>
             </div>
+            <!-- <div class="col">
+              <a class="btn btn-header btn-xl js-scroll-trigger"
+                href="https://www.eventbrite.com/e/techtogether-atlanta-2021-tickets-132143190841"
+                style="width: 100%;">Submit Project</a>
+            </div> -->
           </div>
 
         </div>
@@ -823,21 +831,21 @@
                  -->
 
                 <a target="_blank" >
-                    <div class="s-card1" id="card1">
+                    <div class="s-card1 uni shadow" id="card1">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">4:00 PM - 5:00 PM<br><span style="color:#ff0000;">Universal</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Hackathons 101 - Tips for Beginners</b></span><br><br><span style="font-size: 14px">
-                                            TTA Team
+                                          TTA Team
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </a>
-                <div class="s-card1" id="card2">
+                <div class="s-card1 uni shadow" id="card2">
                         <table class="table">
                             <tbody>
                                 <tr>
@@ -851,7 +859,7 @@
                         </table>
                     </div>
 
-                <div class="s-card1" id="card3">
+                <div class="s-card1 uni shadow" id="card3">
                         <table class="table">
                             <tbody>
                                 <tr>
@@ -861,7 +869,21 @@
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card1" id="card5">
+
+                <div class="s-card1 workshop shadow" id="card4">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">5:30 PM - 6:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
+                                    <td colspan="2" class="event">
+                                        <span><b>The Beginners Guide to the Cloud</b></span><br><br><span style="font-size: 14px">
+                                          Jasmine Greenaway - Microsoft
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <div class="s-card1 activity shadow" id="card5">
                         <table class="table">
                             <tbody>
                                 <tr>
@@ -874,40 +896,53 @@
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card1" id="card6">
+                <div class="s-card1 workshop shadow" id="card6">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">6:00 PM - 7:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Intro to Git/Github</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Maria Sitkovets
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card1" id="card7">
+                <div class="s-card1 workshop shadow" id="card7">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">7:00 PM - 8:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Intro to HTML/CSS / Building a website from scratch</b></span><br><br><span style="font-size: 14px">
-                                          TBD
+                                        <span><b>echoAR: How to Build a Cloud-Connected AR/VR App in 15 Minutes or Less</b></span><br><br><span style="font-size: 14px">
+                                          Alon Grinshpoon - echoAR
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card1" id="card8">
+                <div class="s-card1 workshop shadow" id="card8">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">8:00 PM - 9:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>How to Come up with a Great Project Idea</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Dami Awofisayo
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <div class="s-card1 uni shadow" id="card9">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">9:00 PM - 10:00 PM<br><span style="color:#ff0000;">Universal</span></th>
+                                    <td colspan="2" class="event">
+                                        <span><b>Among Us Game Night</b></span><br><br><span style="font-size: 14px">
+                                            TTA Team
                                     </td>
                                 </tr>
                             </tbody>
@@ -919,11 +954,11 @@
                   S-CARD 2 CONTENT 
                 -->
                 <a target="_blank">
-                    <div class="s-card2" id="card14">
+                    <div class="s-card2 activity shadow">
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">6:00 PM - 8:00 PM<br><span style="color:#40bb53;">Activity</span></th>
+                                    <th scope="row">8:00 AM - 9:00 M<br><span style="color:#40bb53;">Activity</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Team Formation Activities</b></span><br><br><span style="font-size: 14px">
                                             TTA Team
@@ -933,203 +968,191 @@
                         </table>
                     </div>
                 </a>
-                <div class="s-card2" id="card15">
+                <div class="s-card2 workshop shadow">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">9:00 AM - 10:00 AM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Journey Into Tech</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Hosanna Hali
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card16">
+                <div class="s-card2 workshop shadow">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">9:00 AM - 10:00 AM<br><span style="color:#5568ab;">Workshop</span></th>
+                                    <td colspan="2" class="event">
+                                        <span><b>Intro to Web Development</b></span><br><br><span style="font-size: 14px">
+                                          Cici Chen
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">10:00 AM - 11:00 AM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Workshop Title TBD</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Tech Interviewing 101: Landing your dream job</b></span><br><br><span style="font-size: 14px">
+                                          Venika Gaur
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card17">
+                <div class="s-card2 shadow workshop">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">10:00 AM - 11:00 AM<br><span style="color:#5568ab;">Workshop</span></th>
+                                    <td colspan="2" class="event">
+                                        <span><b>Planning Your Career with Design Thinking</b></span><br><br><span style="font-size: 14px">
+                                          Alicia Nachman - VZC
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">11:00 AM - 12:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Intro to UI/UX</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Grace Ling
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card18">
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">11:00 AM - 12:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Working from Home 101: Boosting Your Workplace Productivity</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Mathew A Gaddy
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card19">
+                <div class="s-card2 shadow activity">
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">11:00 AM - 12:00 PM<br><span style="color:#40bb53;">Activity</span></th>
+                                    <th scope="row">1:00 PM - 2:00 PM<br><span style="color:#40bb53;">Activity</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Speed Dating/Networking Session</b></span><br><br><span style="font-size: 14px">
-                                            TTA Team
+                                        <span><b>Networking Session w/ Emerson & NCR</b></span><br><br><span style="font-size: 14px">
+                                          Emerson & NCR Team
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card20">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">11:00 AM - 12:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
-                                    <td colspan="2" class="event">
-                                        <span><b>Intro to SQL</b></span><br><br><span style="font-size: 14px">
-                                            TBD
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <div class="s-card2" id="card21">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">12:00 PM - 1:00 PM<br><span style="color:#ff0000;">Universal</span></th>
-                                    <td colspan="2" class="event">
-                                        <span><b>Lunch</b></span><br><br><span style="font-size: 14px">
-                                            TTA Team
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <div class="s-card2" id="card49">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1:00 PM - 1:45 PM<br><span style="color:#5568ab;">Workshop</span></th>
-                                    <td colspan="2" class="event">
-                                        <span><b>Panel TBD</b></span><br><br><span style="font-size: 14px">
-                                            TBD
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <div class="s-card2" id="card22">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">2:00 PM - 2:30 PM<br><span style="color:#40bb53;">Activity</span></th>
-                                    <td colspan="2" class="event">
-                                        <span><b>Quick Meditation / Mindfulness Session</b></span><br><br><span style="font-size: 14px">
-                                            TBD
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <div class="s-card2" id="card23">
+
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">2:00 PM - 3:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Intro to AR/VR</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Identifying Business Values</b></span><br><br><span style="font-size: 14px">
+                                          Maja Culum & Sarika Sajja - NCR
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card24">
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">2:00 PM - 3:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>#IamRemarkable</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Shalini Kumari
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card25">
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">3:00 PM - 4:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Intro to React</b></span><br><br><span style="font-size: 14px">
-                                          TBD
+                                          Maria 
                                         </span>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card26">
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">3:00 PM - 4:00 PM<br><span style="color:#40bb53;">Activity</span></th>
+                                    <th scope="row">3:00 PM - 4:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Bob Ross meets Digital Art / Bob Ross Remixed : Digital Art Edition</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Creating Personas through Empathy</b></span><br><br><span style="font-size: 14px">
+                                          Maja Culum & Sarika Sajja - NCR
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card27">
+                <div class="s-card2 shadow workshop">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">3:00 PM - 4:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
+                                    <td colspan="2" class="event">
+                                        <span><b>Interactive storytelling using AR technology</b></span><br><br><span style="font-size: 14px">
+                                          Marjan Khabiti
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">4:00 PM - 5:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Let's Get Interdisciplinary: Neuroscience and Technology</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Chinmayi Balusu
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card28">
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">4:00 PM - 5:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Workshop Title TBD</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Why your personal brand matters and how to start building it?</b></span><br><br><span style="font-size: 14px">
+                                          Morgan Bell - Microsoft
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card29">
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
@@ -1143,39 +1166,58 @@
                                         </span>
                                         <br><br>
                                         <span style="font-size: 14px">
-                                            TBD
+                                          Nathan Roane
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card29">
+                    <div class="s-card2 shadow activity">
+                      <table class="table">
+                          <tbody>
+                              <tr>
+                                  <th scope="row">5:00 PM - 6:00 PM<br><span style="color:#40bb53;">Activity</span></th>
+                                  <td colspan="2" class="event">
+                                      <span>
+                                        <b>
+                                          Tech Trivia
+                                        </b>
+                                      </span>
+                                      <br><br>
+                                      <span style="font-size: 14px">
+                                        Capital One Team
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                <div class="s-card2 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">6:00 PM - 7:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Workshop Title TBD</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Building Your First Machine Learning Algorithm</b></span><br><br><span style="font-size: 14px">
+                                          Ayla Orucevic
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card30">
+                <div class="s-card2 shadow activity" id="card30">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">7:00 PM - 8:00 PM<br><span style="color:#40bb53;">Activity</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Virtual Escape Room</b></span><br><br><span style="font-size: 14px">
+                                        <span><b>Game Night</b></span><br><br><span style="font-size: 14px">
                                             TTA Team
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card2" id="card31">
+                <div class="s-card2 shadow activity" id="card31">
                         <table class="table">
                             <tbody>
                                 <tr>
@@ -1188,121 +1230,119 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="s-card2 shadow workshop">
+                      <table class="table">
+                          <tbody>
+                              <tr>
+                                  <th scope="row">9:00 PM - 10:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
+                                  <td colspan="2" class="event">
+                                      <span><b>Intro to Software Testing</b></span><br><br><span style="font-size: 14px">
+                                        Akriti Bhat
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
 
                 <!-- 
                   S-CARD 3 CONTENT 
                 -->
                 <a target="_blank">
-                    <div class="s-card3" id="card35">
+                    <div class="s-card3 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">9:00 AM - 10:00 AM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Workshop Title TBD</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Perfecting Your Hackathon Pitch</b></span><br><br><span style="font-size: 14px">
+                                          Krish Munot
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </a>
-                <div class="s-card3" id="card36">
+                <div class="s-card3 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">10:00 AM - 11:00 AM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Workshop Title TBD</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>AWS & Cloud Computing (Life In The Clouds)</b></span><br><br><span style="font-size: 14px">
+                                          Brian Murray - VZC
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card3" id="card37">
+                <div class="s-card3 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">11:00 AM - 12:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Ace Your Software Engineering Interview</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Role of Automation in IT Industry</b></span><br><br><span style="font-size: 14px">
+                                          Munisekhar Thelluri - VZC
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card3" id="card38">
+                <div class="s-card3 shadow uni">
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">12:00 PM - 1:00 PM<br><span style="color:#ff0000;">Universal</span></th>
+                                    <th scope="row">1:00 PM<br><span style="color:#ff0000;">Universal</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Lunch</b></span><br><br><span style="font-size: 14px">
-                                            TTA Team
+                                        <span><b>Projects Due</b></span><br><br><span style="font-size: 14px">
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card3" id="card39">
+                    <div class="s-card3 shadow uni">
+                      <table class="table">
+                          <tbody>
+                              <tr>
+                                  <th scope="row">1:30 PM<br><span style="color:#ff0000;">Universal</span></th>
+                                  <td colspan="2" class="event">
+                                      <span><b>Late Submissions Due</b></span><br><br><span style="font-size: 14px">
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                <div class="s-card3 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">1:00 PM - 2:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
+                                    <th scope="row">2:00 PM -3:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
-                                        <span><b>Demoing and Deploying at a Hackathon</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                        <span><b>Hyper Precision Location</b></span><br><br><span style="font-size: 14px">
+                                          RJ Oglesbee - VZC
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card3" id="card40">
+                <div class="s-card3 shadow workshop">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">2:00 PM - 3:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Social Entrepreneurship - How to Combine Profit and Purpose</b></span><br><br><span style="font-size: 14px">
-                                            TBD
+                                          Jenna Winocur
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="s-card3" id="card41">
+                <div class="s-card3 shadow uni">
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">3:00 PM - 4:00 PM<br><span style="color:#5568ab;">Workshop</span></th>
-                                    <td colspan="2" class="event">
-                                        <span><b>Workshop Title TBD</b></span><br><br><span style="font-size: 14px">
-                                            TBD
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <div class="s-card3" id="card42">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1:00 PM<br><span style="color:#ff0000;">Universal</span></th>
-                                    <td colspan="2" class="event">
-                                        <span><b>Hacking Ends! - Projects Due</b></span><br><br><span style="font-size: 14px">
-                                            TTA Team
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <div class="s-card3" id="card43">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">3:30 PM - 4:00 PM<br><span style="color:#ff0000;">Universal</span></th>
+                                    <th scope="row">3:00 PM<br><span style="color:#ff0000;">Universal</span></th>
                                     <td colspan="2" class="event">
                                         <span><b>Closing Ceremony</b></span><br><br><span style="font-size: 14px">
                                             TTA Team
@@ -1310,7 +1350,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                      </div>
                 <br><br><br>
             </div>
         </section>
